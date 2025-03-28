@@ -1,4 +1,4 @@
-package kalkulator;
+package lab03;
 
 import java.util.*;
 

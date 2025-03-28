@@ -1,4 +1,4 @@
-package kalkulator;
+package lab03;
 
 public class Calculator {
     private int state = 0;
