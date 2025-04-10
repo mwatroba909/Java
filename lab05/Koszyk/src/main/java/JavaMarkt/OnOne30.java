@@ -1,9 +1,9 @@
 package JavaMarkt;
 
-public class onOne30 implements PromotionCommands {
+public class OnOne30 implements PromotionCommands {
     private String productCode;
 
-    public onOne30(String code) {
+    public OnOne30(String code) {
         this.productCode = code;
     }
 
