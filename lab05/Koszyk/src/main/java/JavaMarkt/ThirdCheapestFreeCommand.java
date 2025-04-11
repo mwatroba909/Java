@@ -9,11 +9,22 @@ public class ThirdCheapestFreeCommand implements PromotionCommands {
         Product[] items = cart.getProducts();
         if (items.length < 3) return;
         
-        // Tworzymy kopię tablicy i sortujemy wg ceny (discountPrice)
         Product[] sorted = Arrays.copyOf(items, items.length);
         Arrays.sort(sorted, Comparator.comparingDouble(Product::getDiscountPrice));
         
-        // Ustawiamy trzeci najtańszy produkt jako gratis
-        sorted[2].setDiscountPrice(0.0);
+        int numberOfGroups = items.length / 3;
+        
+        for (int i = 0; i < numberOfGroups; i++) {
+            int startIndex = i * 3;
+            
+            Product cheapest = sorted[startIndex];
+            for (int j = startIndex + 1; j < startIndex + 3 && j < sorted.length; j++) {
+                if (sorted[j].getDiscountPrice() < cheapest.getDiscountPrice()) {
+                    cheapest = sorted[j];
+                }
+            }
+            
+            cheapest.setDiscountPrice(0.0);
+        }
     }
 }

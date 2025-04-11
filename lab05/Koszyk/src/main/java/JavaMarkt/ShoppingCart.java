@@ -55,7 +55,6 @@ public class ShoppingCart {
     }
 
     public void applyPromotionsWithStrategy(PromotionsStrategy strategy) {
-        // Przekazujemy jedynie użyte promocje (od 0 do promoSize)
         strategy.applyPromotions(this, Arrays.copyOf(promotions, promoSize));
     }
 

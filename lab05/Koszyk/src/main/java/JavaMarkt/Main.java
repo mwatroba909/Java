@@ -5,9 +5,9 @@ public class Main {
         ShoppingCart cart = new ShoppingCart();
         
         // Dodaj produkty do koszyka
-        cart.addProduct(new Product("P001", "Laptop", 2500));
+        cart.addProduct(new Product("P001", "Laptop", 50));
         cart.addProduct(new Product("P002", "Myszka", 50));
-        cart.addProduct(new Product("P003", "Klawiatura", 150));
+        cart.addProduct(new Product("P003", "Klawiatura", 50));
         cart.addProduct(new Product("P004", "Kabel HDMI", 30));
 
         // Utwórz promocje i dodaj je do koszyka
